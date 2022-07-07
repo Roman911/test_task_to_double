@@ -1,3 +1,2 @@
+import './scripts/header.js'
 import './styles/index.scss'
-
-console.log('hello world')

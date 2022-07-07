@@ -1,15 +1,45 @@
+@import "src/variabels/colors";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-family: Montserrat-Regular, sans-serif;
 }
 
-h1 {
-  color: red;
+ul {
+  margin-left: 0;
+  padding-left: 0;
 }
 
-p {
-  color: blue
+li {
+  list-style-type: none;
 }
 
-header {
-  background-image: url("../images/logo.png");
+button {
+  background: $secondary;
+  font-family: Montserrat-Regular, sans-serif;
+  color: #fff;
+  border-radius: 5px;
+  border: 2px solid $secondary;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 300ms;
+  line-height: 15px;
+  cursor: pointer;
+  &.base {
+    width: 270px;
+    padding: 22px 0;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
 }

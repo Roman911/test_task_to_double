@@ -1,0 +1,97 @@
+@import "src/variabels/colors";
+
+@keyframes transforn {
+  0% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $primary;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  @media only screen and (max-width: 780px) {
+    &__container {
+      padding-top: 9px;
+      padding-bottom: 6px;
+    }
+    &__logo {
+      width: 120px;
+    }
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    li {
+      color: #fff;
+      size: 16px;
+      line-height: 20px;
+      font-weight: 600;
+      margin-left: 35px;
+      &:last-child {
+        margin-left: 30px;
+        @media only screen and (max-width: 960px) {
+          display: none;
+        }
+      }
+    }
+    &.active {
+      display: flex;
+    }
+    @media only screen and (max-width: 780px) {
+      display: none;
+      position: absolute;
+      top: 44px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      background-color: $primary;
+      &.active {
+        animation: transforn 300ms ease alternate;
+      }
+      .li {
+        font-size: 17px;
+        line-height: 27px;
+        font-weight: 800;
+        margin: 43px 0;
+        &.active {
+          border-bottom: 2px solid #fff;
+        }
+      }
+    }
+  }
+  &__button {
+    width: 170px;
+    padding: 7px 0;
+    &:hover {
+      border: 2px solid #fff;
+    }
+  }
+  &__elipses {
+    display: none;
+    div {
+      width: 13px;
+      height: 13px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin-left: 5px;
+    }
+    @media only screen and (max-width: 780px) {
+      display: flex;
+    }
+  }
+}
