@@ -1,0 +1,19 @@
+.first {
+  height: 100vh;
+  background-image: url('../images/bg_first_block.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__header {
+    width: 840px;
+  }
+  &__text {
+    margin-top: 20px;
+    width: 432px;
+  }
+  &__btn {
+    margin-top: 58px;
+  }
+}

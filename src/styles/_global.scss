@@ -10,6 +10,14 @@ html {
   font-family: Montserrat-Regular, sans-serif;
 }
 
+h1 {
+  font-family: Montserrat-Black900, sans-serif;
+  color: #484848;
+  font-size: 50px;
+  line-height: 63px;
+  font-weight: 900;
+}
+
 ul {
   margin-left: 0;
   padding-left: 0;
@@ -34,6 +42,13 @@ button {
   &.base {
     width: 270px;
     padding: 22px 0;
+    &:hover {
+      border-color: $primary;
+    }
+    &:active {
+      background: $primary;
+      border-color: $primary;
+    }
   }
 }
 

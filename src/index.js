@@ -1,2 +1,3 @@
-import './scripts/header.js'
-import './styles/index.scss'
+import './scripts/header.js';
+
+import './styles/index.scss';
