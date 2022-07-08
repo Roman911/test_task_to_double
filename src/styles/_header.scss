@@ -80,6 +80,11 @@
     &:hover {
       border: 2px solid #fff;
     }
+    &:active {
+      background: #fff;
+      color: $primary;
+      border: 2px solid #fff;
+    }
   }
   &__elipses {
     display: none;

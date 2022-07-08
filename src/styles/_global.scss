@@ -17,6 +17,14 @@ h1 {
   line-height: 63px;
 }
 
+h2 {
+  font-family: Montserrat-ExtraBold800, sans-serif;
+  color: #111111;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+}
+
 p {
   font-size: 16px;
   line-height: 22px;
@@ -32,7 +40,7 @@ li {
   list-style-type: none;
 }
 
-button {
+.button {
   background: $secondary;
   font-family: Montserrat-Bold700, sans-serif;
   color: #fff;
@@ -44,7 +52,7 @@ button {
   transition: 300ms;
   line-height: 15px;
   cursor: pointer;
-  &.base {
+  &__base {
     width: 270px;
     padding: 22px 0;
     &:hover {
@@ -76,8 +84,13 @@ main {
     line-height: 32px;
   }
 
-  button {
-    &.base {
+  h2 {
+    font-size: 23px;
+    line-height: 35px;
+  }
+
+  .button {
+    &__base {
       width: 100%;
       padding: 17px 0;
     }
