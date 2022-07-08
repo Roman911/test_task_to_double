@@ -1,0 +1,65 @@
+@import "src/variabels/colors";
+
+.border {
+  border: 2px solid $primary;
+}
+
+.carousel {
+  background-image: url('../images/shape2.png'), url('../images/wave.png');
+  background-repeat: no-repeat;
+  background-position: 10% 15%, 89% 94%;
+  background-color: #fff;
+  overflow: hidden;
+  &__wrapper {
+    padding-top: 123px;
+    padding-bottom: 128px;
+  }
+  &__cards {
+    margin-top: 82px;
+    margin-bottom: 82px;
+    display: flex;
+    .card {
+      min-width: 694px;
+      height: 385px;
+      display: flex;
+      align-items: center;
+      padding-left: 70px;
+      padding-right: 30px;
+      border-radius: 15px;
+      margin-right: 25px;
+      &__title {
+        margin-bottom: 29px;
+      }
+      &__p {
+        margin-right: 20px;
+      }
+    }
+  }
+  &__btns {
+    text-align: center;
+    .btn {
+      border-radius: 15px;
+      padding: 19px 16px;
+      background-color: #fff;
+      cursor: pointer;
+      transition: 200ms;
+      &:active {
+        background-color: $primary;
+        img {
+          filter: invert(1)
+        }
+      }
+      &:first-child {
+        margin-right: 30px;
+      }
+      &__img {
+        &_left {
+          transform: rotate(90deg);
+        }
+        &_right {
+          transform: rotate(270deg);
+        }
+      }
+    }
+  }
+}
