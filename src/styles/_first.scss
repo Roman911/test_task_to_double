@@ -1,19 +1,41 @@
 .first {
-  height: 100vh;
+  min-height: calc(100vh - 95px);
   background-image: url('../images/bg_first_block.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  &__wrapper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  &__right {
+    display: none;
+    background-image: url('../images/bg_first_block_mob.jpg');
+    height: calc(50vh - 95px);
+    background-size: cover;
+  }
   &__header {
-    width: 840px;
+    max-width: 840px;
   }
   &__text {
     margin-top: 20px;
-    width: 432px;
+    max-width: 432px;
   }
   &__btn {
     margin-top: 58px;
+  }
+  @media only screen and (max-width: 780px) {
+    background: none;
+    flex-direction: column-reverse;
+    &__left {
+      background-image: url('../images/shape.png');
+      background-repeat: no-repeat;
+      background-position: 90% 60%;
+    }
+    &__right {
+      display: block;
+    }
   }
 }

@@ -15,7 +15,11 @@ h1 {
   color: #484848;
   font-size: 50px;
   line-height: 63px;
-  font-weight: 900;
+}
+
+p {
+  font-size: 16px;
+  line-height: 22px;
 }
 
 ul {
@@ -24,12 +28,13 @@ ul {
 }
 
 li {
+  font-family: Montserrat-SemiBold600, sans-serif;
   list-style-type: none;
 }
 
 button {
   background: $secondary;
-  font-family: Montserrat-Regular, sans-serif;
+  font-family: Montserrat-Bold700, sans-serif;
   color: #fff;
   border-radius: 5px;
   border: 2px solid $secondary;
@@ -52,9 +57,29 @@ button {
   }
 }
 
+main {
+  margin-top: 95px;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1200px;
+  width: 100%;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+@media only screen and (max-width: 780px) {
+  h1 {
+    font-family: Montserrat-ExtraBold800, sans-serif;
+    font-size: 27px;
+    line-height: 32px;
+  }
+
+  button {
+    &.base {
+      width: 100%;
+      padding: 17px 0;
+    }
+  }
 }
