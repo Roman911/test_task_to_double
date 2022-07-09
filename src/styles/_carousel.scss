@@ -10,14 +10,18 @@
   background-position: 10% 15%, 89% 94%;
   background-color: #fff;
   overflow: hidden;
+
   &__wrapper {
     padding-top: 123px;
     padding-bottom: 128px;
   }
+
   &__cards {
     margin-top: 82px;
     margin-bottom: 82px;
     display: flex;
+    transition: 600ms;
+
     .card {
       min-width: 694px;
       height: 385px;
@@ -27,37 +31,107 @@
       padding-right: 30px;
       border-radius: 15px;
       margin-right: 25px;
+
       &__title {
         margin-bottom: 29px;
       }
+
       &__p {
         margin-right: 20px;
       }
     }
   }
+
   &__btns {
     text-align: center;
+
     .btn {
       border-radius: 15px;
       padding: 19px 16px;
       background-color: #fff;
       cursor: pointer;
       transition: 200ms;
+
       &:active {
         background-color: $primary;
+
         img {
           filter: invert(1)
         }
       }
+
       &:first-child {
         margin-right: 30px;
       }
+
       &__img {
         &_left {
           transform: rotate(90deg);
         }
+
         &_right {
           transform: rotate(270deg);
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 960px) {
+    .card {
+      min-width: 624px;
+      height: 325px;
+      padding-left: 50px;
+      padding-right: 20px;
+      margin-right: 20px;
+
+      &__img {
+        width: 220px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 780px) {
+    background-image: url('../images/shape2.png');
+    background-position: -5% 2%;
+    background-size: 38px;
+
+    &__wrapper {
+      padding-top: 42px;
+      padding-bottom: 45px;
+    }
+
+    &__cards {
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+
+    .card {
+      min-width: 100%;
+      min-height: 615px;
+      flex-direction: column;
+      padding-left: 33px;
+      padding-right: 29px;
+      padding-top: 27px;
+      justify-content: space-between;
+      margin-right: 40px;
+
+      &__title {
+        margin-bottom: 0;
+      }
+
+      &__p {
+        line-height: 30px;
+      }
+
+      &__img {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__btns {
+      .btn {
+        &:first-child {
+          margin-right: 100px;
         }
       }
     }

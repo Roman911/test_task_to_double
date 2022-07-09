@@ -1,4 +1,5 @@
-import './scripts/header.js';
+import './scripts/header';
 import './scripts/accordeon';
+import './scripts/carousel';
 
 import './styles/index.scss';
