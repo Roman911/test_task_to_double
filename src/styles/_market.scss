@@ -1,0 +1,100 @@
+@keyframes open {
+  0% {
+    transform: rotateY(0);
+  }
+
+  50% {
+    transform: rotateY(90deg);
+    background-color: #67AEFC;
+  }
+
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+.market {
+  background-image: url('../images/wave2.png'), url('../images/sphere.png');
+  background-repeat: no-repeat;
+  background-position: 10% 15%, 89% 94%;
+  background-color: #DAECFF;
+
+  &__title {
+    margin-bottom: 51px;
+  }
+
+  &__dies {
+    display: flex;
+
+    .dies {
+      width: 100%;
+      color: #fff;
+
+      &:first-child {
+        padding-right: 17px;
+      }
+
+      &:last-child {
+        padding-left: 17px;
+      }
+
+      &__die {
+        width: 100%;
+        height: 447px;
+        border-radius: 15px;
+        margin-bottom: 38px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 500ms;
+
+        h3,
+        p {
+          display: none;
+          opacity: 0;
+          transform: rotateY(180deg);
+        }
+
+        &.active {
+          transform: rotateY(180deg);
+          background: #67AEFC;
+
+          h3,
+          p {
+            display: block;
+            opacity: 1;
+          }
+        }
+
+        &_market {
+          background-image: url("../images/two-miniature-green-blue-shopping-cart-yellow-background.jpg");
+        }
+
+        &_barber {
+          background-image: url("../images/close-up-of-hair-dryer-and-brush.jpg");
+        }
+
+        &_backery {
+          background-image: url("../images/deva-williamson-ygTzbTHgDnY-unsplash.jpg");
+        }
+
+        &_flower {
+          background-image: url("../images/baby-s-breath-flower-bottom-purple-backdrop.jpg");
+        }
+
+        &_visagiste {
+          background-image: url("../images/pexels-shiny-diamond-3373739.jpg");
+        }
+
+        &_painter {
+          background-image: url("../images/color-palette-catalogue-scheme-roller\ 1.jpg");
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

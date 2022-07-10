@@ -11,11 +11,6 @@
   background-color: #fff;
   overflow: hidden;
 
-  &__wrapper {
-    padding-top: 123px;
-    padding-bottom: 128px;
-  }
-
   &__cards {
     margin-top: 82px;
     margin-bottom: 82px;
@@ -95,11 +90,6 @@
     background-position: -5% 2%;
     background-size: 38px;
 
-    &__wrapper {
-      padding-top: 42px;
-      padding-bottom: 45px;
-    }
-
     &__cards {
       margin-top: 20px;
       margin-bottom: 25px;
@@ -121,6 +111,7 @@
 
       &__p {
         line-height: 30px;
+        line-height: 25px;
       }
 
       &__img {

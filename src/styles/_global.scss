@@ -31,8 +31,8 @@ h3 {
 }
 
 p {
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 32px;
 }
 
 ul {
@@ -57,12 +57,15 @@ li {
   transition: 300ms;
   line-height: 15px;
   cursor: pointer;
+
   &__base {
     width: 270px;
     padding: 22px 0;
+
     &:hover {
       border-color: $primary;
     }
+
     &:active {
       background: $primary;
       border-color: $primary;
@@ -82,8 +85,15 @@ main {
   padding-right: 20px;
 }
 
+.wrapper {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 @media only screen and (max-width: 780px) {
-  h1, h3 {
+
+  h1,
+  h3 {
     font-family: Montserrat-ExtraBold800, sans-serif;
   }
 
@@ -107,5 +117,10 @@ main {
       width: 100%;
       padding: 17px 0;
     }
+  }
+
+  .wrapper {
+    padding-top: 20px;
+    padding-bottom: 30px;
   }
 }
