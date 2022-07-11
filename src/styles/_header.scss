@@ -24,6 +24,9 @@
     padding-top: 18px;
     padding-bottom: 18px;
   }
+  &__logo {
+    width: 242px;
+  }
   @media only screen and (max-width: 780px) {
     &__container {
       padding-top: 9px;

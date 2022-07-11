@@ -1,0 +1,86 @@
+@import "src/variabels/colors";
+
+.footer {
+  background-color: $primary;
+  color: #fff;
+  font-size: 20px;
+  &__wrapper {
+    padding-top: 101px;
+    padding-bottom: 79px;
+  }
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    img {
+      @media only screen and (max-width: 340px) {
+        width: 100%;
+      }
+    }
+    .contacts {
+      &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        p {
+          margin-left: 10px;
+        }
+      }
+      &__link {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 110px;
+        left: 0;
+        svg {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+  &__center {
+    margin-top: 15px;
+  }
+  &__right {
+    margin-top: 15px;
+  }
+  &__bottom {
+    text-align: center;
+    margin-top: 120px;
+    font-size: 18px;
+  }
+  @media only screen and (max-width: 780px) {
+    p {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    
+    &__wrapper {
+      padding-top: 46px;
+      padding-bottom: 152px;
+    }
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      .contacts {
+        &__link {
+          position: relative;
+          justify-content: space-between;
+          top: 0;
+          margin-top: 60px;
+          svg {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    &__right {
+      margin-top: 40px;
+    }
+    &__bottom {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  }
+}

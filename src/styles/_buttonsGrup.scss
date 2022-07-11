@@ -13,7 +13,7 @@
     &:active {
       background-color: $primary;
 
-      img {
+      svg {
         filter: invert(1);
       }
     }
@@ -22,7 +22,7 @@
       cursor: default;
       border-color: #c5c5c5;
       background-color: rgba( 175, 175, 175, 0.2);
-      img {
+      svg {
         filter: invert(0);
         opacity: 0.5;
       }
