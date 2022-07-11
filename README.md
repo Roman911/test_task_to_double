@@ -8,4 +8,10 @@ First, run the development server:
 npm run start
 ```
 
+To build the project
+
+```bash
+npm run build
+```
+
 Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
