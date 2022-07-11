@@ -1,0 +1,49 @@
+.info {
+  background-image: url("../images/sphere3.png"), url("../images/orders.png");
+  background-repeat: no-repeat;
+  background-position: 5% 20%, 97% 50%;
+  position: relative;
+  @media only screen and (max-width: 1200px) {
+    background-size: auto, 40%;
+  }
+  &__content {
+    padding-top: 216px;
+    padding-bottom: 160px;
+    max-width: 670px;
+    h2 {
+      text-align: inherit;
+      margin-bottom: 52px;
+    }
+    p {
+      margin-bottom: 45px;
+    }
+  }
+  &__img {
+    display: none;
+    position: absolute;
+    top: -15px;
+    right: 10%;
+    img {
+      width: 40px;
+    }
+    @media only screen and (max-width: 960px) {
+      display: block;
+    }
+  }
+  @media only screen and (max-width: 780px) {
+    background-image: url("../images/orders_mob.png");
+    background-size: 70%;
+    background-position-x: center;
+    &__content {
+      padding-top: 43px;
+      padding-bottom: 50px;
+      max-width: 100%;
+      h2 {
+        text-align: center;
+      }
+      p {
+        padding-top: 50%;
+      }
+    }
+  }
+}

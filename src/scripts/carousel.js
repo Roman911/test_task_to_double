@@ -2,8 +2,8 @@ const slider = document.querySelector(".carousel__cards");
 const slides = document.querySelectorAll(".card");
 const slide = document.querySelector(".card");
 
-const btnPrev = document.querySelector(".btn_prev");
-const btnNext = document.querySelector(".btn_next");
+const btnPrev = document.querySelector(".carousel__btn_prev");
+const btnNext = document.querySelector(".carousel__btn_next");
 
 const widthDesctop = document.documentElement.clientWidth;
 

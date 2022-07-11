@@ -1,5 +1,8 @@
-const dies = document.querySelectorAll(".dies__die");
+const dies = document.querySelectorAll(".dies__item");
 const wrapper = document.querySelector(".market__dies");
+
+const btnPrev = document.querySelector(".market__btn_prev");
+const btnNext = document.querySelector(".market__btn_next");
 
 const widthDesctop = document.documentElement.clientWidth;
 
@@ -41,3 +44,15 @@ if (widthDesctop < 960) {
     })
   }
 }
+
+btnNext.addEventListener('click', function () {
+  btnPrev.disabled = false;
+  btnNext.disabled = true;
+  wrapper.style.transform = `translateX(-52%)`;
+});
+
+btnPrev.addEventListener('click', function () {
+  btnPrev.disabled = true;
+  btnNext.disabled = false;
+  wrapper.style.transform = `translateX(0)`;
+});

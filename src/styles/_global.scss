@@ -88,6 +88,14 @@ main {
 .wrapper {
   padding-top: 120px;
   padding-bottom: 120px;
+  @media only screen and (max-width: 960px) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+.border {
+  border: 2px solid $primary;
 }
 
 @media only screen and (max-width: 780px) {

@@ -1,0 +1,52 @@
+@import "src/variabels/colors";
+
+.btns {
+  text-align: center;
+
+  .btn {
+    border-radius: 15px;
+    padding: 19px 16px;
+    background: transparent;
+    cursor: pointer;
+    transition: 200ms;
+
+    &:active {
+      background-color: $primary;
+
+      img {
+        filter: invert(1);
+      }
+    }
+
+    &:disabled {
+      cursor: default;
+      border-color: #c5c5c5;
+      background-color: rgba( 175, 175, 175, 0.2);
+      img {
+        filter: invert(0);
+        opacity: 0.5;
+      }
+    }
+
+    &:first-child {
+      margin-right: 30px;
+    }
+
+    &__img {
+      &_left {
+        transform: rotate(90deg);
+      }
+
+      &_right {
+        transform: rotate(270deg);
+      }
+    }
+  }
+  @media only screen and (max-width: 780px) {
+    .btn {
+      &:first-child {
+        margin-right: 100px;
+      }
+    }
+  }
+}
