@@ -73,6 +73,23 @@ li {
   }
 }
 
+input {
+  font-family: Montserrat-Regular, sans-serif;
+  border: 1px solid $primary;
+  padding: 19px 14px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  outline: none;
+  font-size: 20px;
+  line-height: 20px;
+  color: #939393;
+  &:focus {
+    border: 2px solid $primary;
+    color: #292929;
+  }
+}
+
 main {
   margin-top: 95px;
 }

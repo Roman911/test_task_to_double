@@ -48,7 +48,7 @@
         }
 
         &__btn {
-          img {
+          svg {
             transform: rotate(180deg);
           }
         }
@@ -98,7 +98,7 @@
       background: none;
       cursor: pointer;
 
-      img {
+      svg {
         transition: 200ms;
       }
     }

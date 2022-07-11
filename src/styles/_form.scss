@@ -1,0 +1,38 @@
+.form {
+  background-image: url("../images/phone.png"), url("../images/wave3.png");
+  background-repeat: no-repeat;
+  background-position: 6% 58%, 89% 44%;
+  background-color: #DAECFF;
+  padding: 180px 20px 128px 20px;
+  &__container {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+    h2 {
+      margin-bottom: 30px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+  }
+  &__button {
+    margin-top: 30px;
+  }
+  @media only screen and (max-width: 780px) {
+    padding-top: 42px;
+    padding-bottom: 85%;
+    background-image: url("../images/postpaid.png");
+    background-position: center bottom;
+    &__container {
+      h2 {
+        margin-bottom: 17px;
+      }
+      p {
+        margin-bottom: 25px;
+      }
+    }
+    &__button {
+      margin-top: 10px;
+    }
+  }
+}
