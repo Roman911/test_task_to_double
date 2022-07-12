@@ -1,22 +1,37 @@
 .first {
   min-height: calc(100vh - 95px);
-  background-image: url('../images/bg_first_block.jpg');
+  background-image: url('../images/sphere3.png'), url('../images/wave1.png'), url('../images/ellipse.png'), url('../images/bg_first_block_right.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: 9% 10%, 59px 85%, left 91%, right center;
+  background-size: 52px, auto, auto, auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media only screen and (max-width: 1470px) {
+    background-position: 9% 10%, 59px 85%, left 91%, 130% center;
+    background-size: 52px, auto, auto, 70%;
+  }
 
   &__wrapper {
     padding-top: 50px;
     padding-bottom: 50px;
   }
 
+  @media only screen and (max-width: 960px) {
+
+    &__wrapper {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
   &__right {
     display: none;
-    background-image: url('../images/bg_first_block_mob.jpg');
-    height: calc(50vh - 95px);
-    background-size: cover;
+    background-image: url('../images/ellipse2.png'), url('../images/wave4.png'), url('../images/bg_first_block_right.png');
+    background-repeat: no-repeat;
+    background-position: left 5%, left 90%, right center;
+    background-size: auto, auto, 90%;
+    height: calc(50vh - 43px);
   }
 
   &__header {
@@ -34,7 +49,9 @@
     margin-top: 58px;
   }
 
-  @media only screen and (max-width: 780px) {
+  @media only screen and (max-width: 760px) {
+
+    min-height: calc(100vh - 43px);
     background: none;
     flex-direction: column-reverse;
 

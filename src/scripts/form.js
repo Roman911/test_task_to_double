@@ -29,7 +29,7 @@ const onName = () => {
 }
 
 const onNumber = () => {
-  if (isNumberlValid(number.value)) {
+  if (isNumberlValid(number.value) && number.value.length === 12) {
     number.style.borderColor = '#67AEFC';
     isNumber = true;
   } else {
@@ -59,9 +59,12 @@ form.addEventListener('submit', event => {
     userName.value = '';
     number.value = '';
     email.value = '';
+    isName = false;
+    isNumber = false;
+    isEmail = false;
   } else {
-    userName.style.borderColor = 'red';
-    number.style.borderColor = 'red';
-    email.style.borderColor = 'red';
+    isName || (userName.style.borderColor = 'red');
+    isNumber || (number.style.borderColor = 'red');
+    isEmail || (email.style.borderColor = 'red');
   }
 });

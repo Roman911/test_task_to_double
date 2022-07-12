@@ -97,6 +97,12 @@ input {
 
 main {
   margin-top: 95px;
+  @media only screen and (max-width: 1040px) {
+    margin-top: 78px;
+  }
+  @media only screen and (max-width: 760px) {
+    margin-top: 43px;
+  }
 }
 
 .container {
@@ -110,18 +116,36 @@ main {
 .wrapper {
   padding-top: 120px;
   padding-bottom: 120px;
-
-  @media only screen and (max-width: 960px) {
-    padding-top: 90px;
-    padding-bottom: 90px;
-  }
 }
 
 .border {
   border: 2px solid $primary;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 960px) {
+
+  h1 {
+    font-size: 34px;
+    line-height: 32px;
+  }
+
+  h2 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  h3 {
+    font-size: 19px;
+    line-height: 27px;
+  }
+
+  .wrapper {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
 
   h1,
   h3 {

@@ -49,13 +49,13 @@ const playSlideshow = () => {
   slideInterval = setInterval(nextSlide, 4000);
 }
 
-btnNext.addEventListener('click', function () {
+btnNext.addEventListener('click', () => {
   clearInterval(slideInterval);
   nextSlide();
   setTimeout(playSlideshow, 2000);
 });
 
-btnPrev.addEventListener('click', function () {
+btnPrev.addEventListener('click', () => {
   clearInterval(slideInterval);
   prevSlide();
   setTimeout(playSlideshow, 2000);

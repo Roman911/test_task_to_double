@@ -4,25 +4,40 @@ const btn = rootElement.querySelector('.header__elipses');
 const parent = document.querySelector('.header__menu');
 let menuItem = parent.querySelectorAll('.li');
 
-const toggleClass = () => {
-  parent.classList.toggle('active')
+let isOpen = false;
+
+// Відкрити меню для мобільних пристроїв
+const openMenu = () => {
+  parent.style.transform = `translateY(0)`;
+  isOpen = true;
 }
 
-const removeClass = () => {
-  parent.classList.remove('active')
+// Закрити меню
+const closeMenu = () => {
+  parent.style.transform = `translateY(-150%)`;
+  isOpen = false;
 }
 
-btn.addEventListener('click', function() {
-  toggleClass()
-})
+// Клік на кнопку
+btn.addEventListener('click', () => {
+  if(isOpen) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
 
-parent.addEventListener('click', (event) => {
+// Клік на список в меню
+parent.addEventListener('click', event => {
   let target = event.target;
   if(target.classList.contains('li')) {
+    // Видалення всіх класів 'active'
     for(let i = 0; i < menuItem.length; i++) {
       menuItem[i].classList.remove('active');
     }
+    // Добавляємо клас 'active' потрібному елементу
     target.classList.add('active');
   }
-  removeClass();
+  // Закриваємо меню
+  closeMenu();
 });
