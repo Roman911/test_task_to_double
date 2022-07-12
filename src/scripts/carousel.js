@@ -5,6 +5,7 @@ const slide = document.querySelector(".card");
 const btnPrev = document.querySelector(".carousel__btn_prev");
 const btnNext = document.querySelector(".carousel__btn_next");
 
+// Визначаємо ширину екрану
 const widthDesctop = document.documentElement.clientWidth;
 
 const ln = slides.length;
@@ -21,10 +22,12 @@ if (widthDesctop > 1200) {
   proc = (Math.round(widthDesctop / (slide.offsetWidth - 24) * 100)) * (ln - 1)
 }
 
+// Прокрутка слайду
 let transform = () => {
   slider.style.transform = `translateX(-${i * proc / (ln - 1)}%)`;
 }
 
+// Наступний слайд
 const nextSlide = () => {
   if (i < ln - 1) {
     i++
@@ -34,6 +37,7 @@ const nextSlide = () => {
   transform();
 }
 
+// Попередній слайд
 const prevSlide = () => {
   if (i > 0) {
     i--
@@ -45,6 +49,7 @@ const prevSlide = () => {
 
 let slideInterval = setInterval(nextSlide, 4000);
 
+// Автоматичний запуск слайдеру
 const playSlideshow = () => {
   slideInterval = setInterval(nextSlide, 4000);
 }

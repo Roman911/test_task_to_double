@@ -10,14 +10,7 @@ let isName = false;
 let isNumber = false;
 let isEmail = false;
 
-const isEmailValid = value => {
-  return EMAIL_REGEXP.test(value);
-}
-
-const isNumberlValid = value => {
-  return NUMBER_REGEXP.test(value);
-}
-
+// Провірка на валідність Ім'я
 const onName = () => {
   if (userName.value.length > 3 && userName.value.length < 25) {
     userName.style.borderColor = '#67AEFC';
@@ -28,6 +21,11 @@ const onName = () => {
   }
 }
 
+// Провірка на валідність номер телефону
+const isNumberlValid = value => {
+  return NUMBER_REGEXP.test(value);
+}
+
 const onNumber = () => {
   if (isNumberlValid(number.value) && number.value.length === 12) {
     number.style.borderColor = '#67AEFC';
@@ -36,6 +34,11 @@ const onNumber = () => {
     number.style.borderColor = 'red';
     isNumber = false;
   }
+}
+
+// Провірка на валідність емейлу
+const isEmailValid = value => {
+  return EMAIL_REGEXP.test(value);
 }
 
 const onEmail = () => {
@@ -52,9 +55,11 @@ userName.addEventListener('input', onName);
 number.addEventListener('input', onNumber);
 email.addEventListener('input', onEmail);
 
+// Відправка форми
 form.addEventListener('submit', event => {
   event.preventDefault();
 
+  // Провірка чи всі поля валідні, якщо так, очисчується форма, в іншому випадку показує невалідні поля
   if (isName && isNumber && isEmail) {
     userName.value = '';
     number.value = '';
